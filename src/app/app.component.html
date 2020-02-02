@@ -1,0 +1,32 @@
+
+<style>
+
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <span>Employees</span>
+  <div class="spacer"></div>
+  <button class="btn navbar-btn" routerLink="/">Home</button>
+  <button class="btn navbar-btn" routerLink="/employees">Employees</button>
+  <button class="btn navbar-btn" routerLink="/add">New Employee</button>
+
+</div>
+
+<router-outlet></router-outlet>

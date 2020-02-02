@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-around">
+    <div class="flex-grow-1"></div>
+    <div class="flex-grow-1">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="empName">Name:</label>
+                <input id="empName" type="text" formControlName="empName" class="form-control">
+                <div *ngIf="submitted && employeeForm.get('empName').invalid">
+                    <p style="color: red">Please enter employee name.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email" type="email" formControlName="email" class="form-control">
+                <div *ngIf="submitted && !addEmployeeForm.get('email').valid">
+                    <p style="color: red">Please enter employee email.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="form-control">
+                    <label class="radio-inline">
+                        <input type="radio" value="male" name="gender" formControlName="gender">
+                        Male
+                    </label>
+                    <label class="radio-inline radio-female">
+                        <input type="radio" value="female" name="gender" formControlName="gender">
+                        Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="designation">Designation:</label>
+                <input id="designation" type="text" formControlName="designation" class="form-control">
+                <div *ngIf="submitted && employeeForm.get('designation').invalid">
+                    <p style="color: red">Please enter designation.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="salary">Salary:</label>
+                <input id="salary" type="number" formControlName="salary" class="form-control">
+                <div *ngIf="submitted && employeeForm.get('salary').invalid">
+                    <p style="color: red">Please enter salary.</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button class="btn btn-default" routerLink="/employees">Cancel</button>
+        </form>
+    </div>
+    <div class="flex-grow-1"></div>
+</div>

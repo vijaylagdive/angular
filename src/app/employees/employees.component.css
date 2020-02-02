@@ -1,0 +1,16 @@
+.d-flex{
+    margin-top: 2%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+thead {
+    background-color: #1976d2;
+    color: white;
+} 
+
+.search-input{
+    width: 250px;
+    float: right;
+    margin-bottom: 10px;
+}
