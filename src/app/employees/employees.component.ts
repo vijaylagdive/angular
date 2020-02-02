@@ -20,7 +20,6 @@ export class EmployeesComponent implements OnInit {
   }
 
   delete(empIndex: number){
-     console.log("delete");
       if(confirm("Are you sure to delete?")) {
         this.employees.splice(empIndex,1);
       }

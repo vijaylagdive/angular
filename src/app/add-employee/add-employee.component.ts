@@ -13,7 +13,6 @@ export class AddEmployeeComponent implements OnInit {
   addEmployeeForm: FormGroup;
   submitted: Boolean = false;
   employee: Employee;
-  designations = ['Engineer','Sr Engineer','Analyst','Lead Engineer']
 
   constructor(private fb: FormBuilder, private employeeService: EmployeeService, private router: Router) { }
 
@@ -31,7 +30,6 @@ export class AddEmployeeComponent implements OnInit {
     this.submitted = true;
     if(this.addEmployeeForm.valid){
       let form = this.addEmployeeForm;
-      let employees = this.employeeService.employees;
       this.employee = new Employee();
       this.employee.name = form.get('empName').value;
       this.employee.email = form.get('email').value;
